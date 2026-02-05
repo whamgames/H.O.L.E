@@ -674,7 +674,130 @@
     <GUIs>
       <GUIFolder Name="Main">
         <SubFolders />
-        <GUIs />
+        <GUIs>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>320</Height>
+              <ID>0</ID>
+              <Left>0</Left>
+              <Name>guiMainMenu</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <Top>0</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>320</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>25</Height>
+                <ID>0</ID>
+                <Image>0</Image>
+                <Left>200</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnMainStart</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">NEW GAME</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>20</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>100</Width>
+                <ZOrder>0</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>25</Height>
+                <ID>1</ID>
+                <Image>0</Image>
+                <Left>200</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnMainLoad</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">LOAD GAME</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>50</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>100</Width>
+                <ZOrder>1</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>25</Height>
+                <ID>2</ID>
+                <Image>0</Image>
+                <Left>200</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnMainSettings</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text>SETTINGS</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>100</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>100</Width>
+                <ZOrder>2</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>25</Height>
+                <ID>3</ID>
+                <Image>0</Image>
+                <Left>200</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnMainQuit</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text>QUIT</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>280</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>100</Width>
+                <ZOrder>3</ZOrder>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
+        </GUIs>
       </GUIFolder>
     </GUIs>
     <InventoryItems>
