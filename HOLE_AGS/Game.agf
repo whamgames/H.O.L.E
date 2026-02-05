@@ -20,12 +20,12 @@
       <ColorDepth>TrueColor</ColorDepth>
       <CompressSpritesType>None</CompressSpritesType>
       <CustomDataDir IsNull="True" />
-      <CustomResolution>320,200</CustomResolution>
+      <CustomResolution>320,320</CustomResolution>
       <DebugMode>True</DebugMode>
       <DefaultRoomMaskResolution>1</DefaultRoomMaskResolution>
-      <Description />
-      <DeveloperName />
-      <DeveloperURL />
+      <Description xml:space="preserve">Enter the H.O.L.E</Description>
+      <DeveloperName>WHAMGAMES</DeveloperName>
+      <DeveloperURL>https://www.whamgames.com</DeveloperURL>
       <DialogOptionsBackwards>False</DialogOptionsBackwards>
       <DialogOptionsBullet>0</DialogOptionsBullet>
       <DialogOptionsGUI>0</DialogOptionsGUI>
@@ -57,9 +57,9 @@
       <OptimizeSpriteStorage>True</OptimizeSpriteStorage>
       <PixelPerfect>True</PixelPerfect>
       <PlaySoundOnScore>0</PlaySoundOnScore>
-      <ReleaseDate>2022-03-01</ReleaseDate>
+      <ReleaseDate>2026-02-28</ReleaseDate>
       <RenderAtScreenResolution>UserDefined</RenderAtScreenResolution>
-      <RoomTransition>FadeOutAndIn</RoomTransition>
+      <RoomTransition>Instant</RoomTransition>
       <RunGameLoopsWhileDialogOptionsDisplayed>False</RunGameLoopsWhileDialogOptionsDisplayed>
       <SaveGameFileExtension />
       <SaveGameFolderName>H.O.L.E</SaveGameFolderName>
@@ -1549,7 +1549,9 @@
   <Component Name="Translations" />
   <Component Name="MusicAndSpeech">
     <SpeechVoxFiles />
-    <PamFiles />
+    <PamFiles>
+      <Folder Name="speech" />
+    </PamFiles>
   </Component>
   <Component Name="Welcome" />
   <Component Name="DebugLog" />
