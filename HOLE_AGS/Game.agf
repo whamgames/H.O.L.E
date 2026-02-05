@@ -709,7 +709,7 @@
                 <MouseoverImage>0</MouseoverImage>
                 <Name>btnMainStart</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btnMainStart_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
                 <Text xml:space="preserve">NEW GAME</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
@@ -734,7 +734,7 @@
                 <MouseoverImage>0</MouseoverImage>
                 <Name>btnMainLoad</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btnMainLoad_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
                 <Text xml:space="preserve">LOAD GAME</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
@@ -759,7 +759,7 @@
                 <MouseoverImage>0</MouseoverImage>
                 <Name>btnMainSettings</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btnMainSettings_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
                 <Text>SETTINGS</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
@@ -784,7 +784,7 @@
                 <MouseoverImage>0</MouseoverImage>
                 <Name>btnMainQuit</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btnMainQuit_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
                 <Text>QUIT</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
@@ -1058,10 +1058,10 @@
         <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
         <AnimateOnlyWhenMoving>False</AnimateOnlyWhenMoving>
         <AnimationDelay>5</AnimationDelay>
-        <HotspotX>0</HotspotX>
-        <HotspotY>0</HotspotY>
+        <HotspotX>7</HotspotX>
+        <HotspotY>1</HotspotY>
         <ID>2</ID>
-        <Image>0</Image>
+        <Image>1</Image>
         <Name>Interact</Name>
         <StandardMode>True</StandardMode>
         <View>0</View>
@@ -1480,6 +1480,36 @@
               <RemapToRoomPalette>False</RemapToRoomPalette>
               <ImportMethod>LeaveAsIs</ImportMethod>
               <ImportAlphaChannel>False</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="1" Width="15" Height="10" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>D:\Projects\H.O.L.E\GFX\mousecursor_0.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>10</ImportHeight>
+              <ImportWidth>15</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>False</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="2" Width="15" Height="10" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>D:\Projects\H.O.L.E\GFX\mousecursor_1.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>10</ImportHeight>
+              <ImportWidth>15</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>False</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
         </Sprites>
