@@ -21,7 +21,7 @@
       <CompressSpritesType>None</CompressSpritesType>
       <CustomDataDir IsNull="True" />
       <CustomResolution>320,320</CustomResolution>
-      <DebugMode>True</DebugMode>
+      <DebugMode>False</DebugMode>
       <DefaultRoomMaskResolution>1</DefaultRoomMaskResolution>
       <Description xml:space="preserve">Enter the H.O.L.E</Description>
       <DeveloperName>WHAMGAMES</DeveloperName>
@@ -86,7 +86,7 @@
       <UseOldKeyboardHandling>False</UseOldKeyboardHandling>
       <Version>1.0.0.0</Version>
       <WalkInLookMode>False</WalkInLookMode>
-      <WhenInterfaceDisabled>GreyOut</WhenInterfaceDisabled>
+      <WhenInterfaceDisabled>Unchanged</WhenInterfaceDisabled>
     </Settings>
     <RuntimeSetup>
       <AAScaledSprites>False</AAScaledSprites>
@@ -953,6 +953,71 @@
                 <Width>139</Width>
                 <ZOrder>5</ZOrder>
               </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>12</Height>
+                <ID>6</ID>
+                <Left>1</Left>
+                <Locked>False</Locked>
+                <Name>deLabLevel</Name>
+                <Text xml:space="preserve">LVL: 1</Text>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Top>50</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>139</Width>
+                <ZOrder>6</ZOrder>
+              </GUILabel>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>False</Clickable>
+              <Height>320</Height>
+              <ID>2</ID>
+              <Left>0</Left>
+              <Name>guiScannerReticle</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <Top>0</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>320</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>False</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>20</Height>
+                <ID>0</ID>
+                <Image>21</Image>
+                <Left>150</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnScannerReticle</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>130</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>19</Width>
+                <ZOrder>0</ZOrder>
+              </GUIButton>
             </Controls>
           </GUIMain>
         </GUIs>
@@ -1650,6 +1715,21 @@
           <Name>gRopeBreakTension</Name>
           <Type>float</Type>
         </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>1</DefaultValue>
+          <Name>gDepthLayer</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>0</DefaultValue>
+          <Name>gScanTimer</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>0</DefaultValue>
+          <Name>gNextPOIBatch</Name>
+          <Type>int</Type>
+        </GlobalVariable>
       </Variables>
     </GlobalVariables>
     <Sprites>
@@ -1658,12 +1738,12 @@
           <SpriteFolder Name="Player">
             <SubFolders />
             <Sprites>
-              <Sprite Slot="3" Width="25" Height="299" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+              <Sprite Slot="3" Width="25" Height="28" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
-                  <FileName>D:\Projects\H.O.L.E\GFX\Character\RopeMan_01.png</FileName>
+                  <FileName>D:\Projects\H.O.L.E\GFX\Character\RopeManR_01.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
-                  <ImportHeight>299</ImportHeight>
+                  <ImportHeight>28</ImportHeight>
                   <ImportWidth>25</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
@@ -1673,12 +1753,12 @@
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="4" Width="25" Height="299" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+              <Sprite Slot="4" Width="25" Height="28" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
-                  <FileName>D:\Projects\H.O.L.E\GFX\Character\RopeMan_02.png</FileName>
+                  <FileName>D:\Projects\H.O.L.E\GFX\Character\RopeManL_01.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
-                  <ImportHeight>299</ImportHeight>
+                  <ImportHeight>28</ImportHeight>
                   <ImportWidth>25</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
@@ -1691,9 +1771,140 @@
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Walls">
-            <SubFolders />
+            <SubFolders>
+              <SpriteFolder Name="WallsLoops">
+                <SubFolders />
+                <Sprites>
+                  <Sprite Slot="12" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\Projects\H.O.L.E\GFX\Map\WallSection_01_loop.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>1280</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="13" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\Projects\H.O.L.E\GFX\Map\WallSection_02_loop.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>1280</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="14" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\Projects\H.O.L.E\GFX\Map\WallSection_03_loop.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>1280</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="15" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\Projects\H.O.L.E\GFX\Map\WallSection_04_loop.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>1280</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="16" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\Projects\H.O.L.E\GFX\Map\WallSection_05_loop.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>1280</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="17" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\Projects\H.O.L.E\GFX\Map\WallSection_06_loop.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>1280</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                </Sprites>
+              </SpriteFolder>
+              <SpriteFolder Name="POI">
+                <SubFolders />
+                <Sprites>
+                  <Sprite Slot="22" Width="19" Height="19" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\Projects\H.O.L.E\GFX\POI\POI_01_L.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>19</ImportHeight>
+                      <ImportWidth>19</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="23" Width="19" Height="19" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\Projects\H.O.L.E\GFX\POI\POI_01_R.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>19</ImportHeight>
+                      <ImportWidth>19</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                </Sprites>
+              </SpriteFolder>
+            </SubFolders>
             <Sprites>
-              <Sprite Slot="5" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="5" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
                   <FileName>D:\Projects\H.O.L.E\GFX\Map\WallSection_01.png</FileName>
                   <OffsetX>0</OffsetX>
@@ -1708,7 +1919,7 @@
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="6" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="6" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
                   <FileName>D:\Projects\H.O.L.E\GFX\Map\WallSection_02.png</FileName>
                   <OffsetX>0</OffsetX>
@@ -1723,7 +1934,7 @@
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="7" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="7" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
                   <FileName>D:\Projects\H.O.L.E\GFX\Map\WallSection_03.png</FileName>
                   <OffsetX>0</OffsetX>
@@ -1738,7 +1949,7 @@
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="8" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="8" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
                   <FileName>D:\Projects\H.O.L.E\GFX\Map\WallSection_04.png</FileName>
                   <OffsetX>0</OffsetX>
@@ -1753,7 +1964,7 @@
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="9" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="9" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
                   <FileName>D:\Projects\H.O.L.E\GFX\Map\WallSection_05.png</FileName>
                   <OffsetX>0</OffsetX>
@@ -1768,7 +1979,7 @@
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="10" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+              <Sprite Slot="10" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
                   <FileName>D:\Projects\H.O.L.E\GFX\Map\WallSection_06.png</FileName>
                   <OffsetX>0</OffsetX>
@@ -1799,6 +2010,81 @@
                 </Source>
               </Sprite>
             </Sprites>
+          </SpriteFolder>
+          <SpriteFolder Name="Rope">
+            <SubFolders />
+            <Sprites>
+              <Sprite Slot="18" Width="25" Height="299" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>D:\Projects\H.O.L.E\GFX\Rope\Rope.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>299</ImportHeight>
+                  <ImportWidth>25</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+            </Sprites>
+          </SpriteFolder>
+          <SpriteFolder Name="GUI">
+            <SubFolders>
+              <SpriteFolder Name="Scanner">
+                <SubFolders />
+                <Sprites>
+                  <Sprite Slot="19" Width="19" Height="20" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\Projects\H.O.L.E\GFX\GUI\Scanner_Fail01.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>20</ImportHeight>
+                      <ImportWidth>19</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="20" Width="19" Height="20" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\Projects\H.O.L.E\GFX\GUI\Scanner_Flash01.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>20</ImportHeight>
+                      <ImportWidth>19</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="21" Width="19" Height="20" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\Projects\H.O.L.E\GFX\GUI\Scanner_Seeker.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>20</ImportHeight>
+                      <ImportWidth>19</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                </Sprites>
+              </SpriteFolder>
+            </SubFolders>
+            <Sprites />
           </SpriteFolder>
         </SubFolders>
         <Sprites>
@@ -1910,14 +2196,124 @@
                   </ViewFrame>
                 </Frames>
               </Loop>
+              <Loop>
+                <ID>4</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+              <Loop>
+                <ID>5</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+              <Loop>
+                <ID>6</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+              <Loop>
+                <ID>7</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+              <Loop>
+                <ID>8</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>4</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>9</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>3</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>2</ID>
+            <Name>vScannerz</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>21</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>20</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>21</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>19</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>21</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
             </Loops>
           </View>
         </Views>
       </ViewFolder>
     </Views>
-    <DeletedViews>
-      <ViewID>2</ViewID>
-    </DeletedViews>
+    <DeletedViews />
     <Scripts>
       <ScriptFolder Name="Main">
         <SubFolders />
