@@ -1014,6 +1014,24 @@
                 <Width>139</Width>
                 <ZOrder>8</ZOrder>
               </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>12</Height>
+                <ID>9</ID>
+                <Left>1</Left>
+                <Locked>False</Locked>
+                <Name>deLabRopeleft</Name>
+                <Text xml:space="preserve">POS: 1</Text>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Top>73</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>139</Width>
+                <ZOrder>9</ZOrder>
+              </GUILabel>
             </Controls>
           </GUIMain>
           <GUIMain>
@@ -1905,7 +1923,7 @@
           <Type>int</Type>
         </GlobalVariable>
         <GlobalVariable>
-          <DefaultValue>800.0</DefaultValue>
+          <DefaultValue>12400.0</DefaultValue>
           <Name>gRopeSpoolRemaining</Name>
           <Type>float</Type>
         </GlobalVariable>
@@ -1938,6 +1956,26 @@
           <DefaultValue>0</DefaultValue>
           <Name>gGameEndTriggered</Name>
           <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>0</DefaultValue>
+          <Name>gRopeSpoolStatus</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>0</DefaultValue>
+          <Name>gRopeRunouts</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>true</DefaultValue>
+          <Name>gRopeSnapMercy</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>true</DefaultValue>
+          <Name>gRopeSpoolMercy</Name>
+          <Type>bool</Type>
         </GlobalVariable>
       </Variables>
     </GlobalVariables>
