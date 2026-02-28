@@ -670,6 +670,14 @@
             <Description>GAME_Hole</Description>
             <Number>11</Number>
           </UnloadedRoom>
+          <UnloadedRoom>
+            <Description>ScoreScreen</Description>
+            <Number>15</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description>EndCredits</Description>
+            <Number>20</Number>
+          </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
     </Rooms>
@@ -1367,6 +1375,50 @@
                 <ZOrder>2</ZOrder>
               </GUILabel>
             </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>320</Height>
+              <ID>6</ID>
+              <Left>0</Left>
+              <Name>guiScoreScreen</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Top>0</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>320</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls />
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>320</Height>
+              <ID>7</ID>
+              <Left>0</Left>
+              <Name>guiEndCredits</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Top>0</Top>
+              <Transparency>0</Transparency>
+              <Visible>True</Visible>
+              <Width>320</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls />
           </GUIMain>
         </GUIs>
       </GUIFolder>
