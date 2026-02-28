@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>0</AudioIndexer>
+      <AudioIndexer>14</AudioIndexer>
       <AutoMoveInWalkMode>True</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -1987,6 +1987,11 @@
           <Name>audioAmbience</Name>
           <Type>AudioChannel*</Type>
         </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue />
+          <Name>audioSFX</Name>
+          <Type>AudioChannel*</Type>
+        </GlobalVariable>
       </Variables>
     </GlobalVariables>
     <Sprites>
@@ -3756,7 +3761,7 @@
                     <Flipped>False</Flipped>
                     <ID>2</ID>
                     <Image>39</Image>
-                    <Sound>0</Sound>
+                    <Sound>8</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
@@ -4475,7 +4480,99 @@
         <SubFolders>
           <AudioClipFolder Name="Music">
             <SubFolders />
-            <AudioClips />
+            <AudioClips>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>0</ID>
+                <Index>1</Index>
+                <ScriptName>aCrypto</ScriptName>
+                <SourceFileName>D:\Projects\H.O.L.E\AUDIO\Music\Crypto.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2026-02-28 18:46:59Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>1</ID>
+                <Index>2</Index>
+                <ScriptName>aGiant_Wyrm</ScriptName>
+                <SourceFileName xml:space="preserve">D:\Projects\H.O.L.E\AUDIO\Music\Giant Wyrm.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2026-02-28 18:50:43Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>2</ID>
+                <Index>3</Index>
+                <ScriptName>aLong_Note_Two</ScriptName>
+                <SourceFileName xml:space="preserve">D:\Projects\H.O.L.E\AUDIO\Music\Long Note Two.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2026-02-28 18:48:22Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>3</ID>
+                <Index>4</Index>
+                <ScriptName>aSatiate_Strings</ScriptName>
+                <SourceFileName xml:space="preserve">D:\Projects\H.O.L.E\AUDIO\Music\Satiate Strings.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2026-02-28 19:05:06Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>4</ID>
+                <Index>5</Index>
+                <ScriptName>aSCP_x2x</ScriptName>
+                <SourceFileName>D:\Projects\H.O.L.E\AUDIO\Music\SCP-x2x.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2026-02-28 18:49:39Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>5</ID>
+                <Index>6</Index>
+                <ScriptName>aShadowlands_6___The_Pit</ScriptName>
+                <SourceFileName xml:space="preserve">D:\Projects\H.O.L.E\AUDIO\Music\Shadowlands 6 - The Pit.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2026-02-28 18:50:16Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>10</ID>
+                <Index>11</Index>
+                <ScriptName>aOssuary_5___Rest</ScriptName>
+                <SourceFileName xml:space="preserve">D:\Projects\H.O.L.E\AUDIO\Music\Ossuary 5 - Rest.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2026-02-28 19:01:57Z</FileLastModifiedDate>
+              </AudioClip>
+            </AudioClips>
             <AudioClipFolder>
               <DefaultBundlingType>InSeparateVOX</DefaultBundlingType>
               <DefaultPriority>Inherit</DefaultPriority>
@@ -4486,7 +4583,99 @@
           </AudioClipFolder>
           <AudioClipFolder Name="Sounds">
             <SubFolders />
-            <AudioClips />
+            <AudioClips>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>6</ID>
+                <Index>7</Index>
+                <ScriptName>aAmbi_cavehum</ScriptName>
+                <SourceFileName>D:\Projects\H.O.L.E\AUDIO\ambi_cavehum.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-02-28 18:53:29Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>7</ID>
+                <Index>8</Index>
+                <ScriptName>aCromch</ScriptName>
+                <SourceFileName>D:\Projects\H.O.L.E\AUDIO\cromch.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-02-28 18:58:50Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>8</ID>
+                <Index>9</Index>
+                <ScriptName>aRadio_close</ScriptName>
+                <SourceFileName>D:\Projects\H.O.L.E\AUDIO\radio_close.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-02-28 18:52:30Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>9</ID>
+                <Index>10</Index>
+                <ScriptName>aRadio_open</ScriptName>
+                <SourceFileName>D:\Projects\H.O.L.E\AUDIO\radio_open.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-02-28 18:51:57Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>11</ID>
+                <Index>12</Index>
+                <ScriptName>aClaspclack</ScriptName>
+                <SourceFileName>D:\Projects\H.O.L.E\AUDIO\claspclack.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-02-28 19:52:58Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>12</ID>
+                <Index>13</Index>
+                <ScriptName>aScanbeep_fail</ScriptName>
+                <SourceFileName>D:\Projects\H.O.L.E\AUDIO\scanbeep_fail.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-02-28 19:58:20Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>13</ID>
+                <Index>14</Index>
+                <ScriptName>aScanbeep_ok</ScriptName>
+                <SourceFileName>D:\Projects\H.O.L.E\AUDIO\scanbeep_ok.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-02-28 19:58:00Z</FileLastModifiedDate>
+              </AudioClip>
+            </AudioClips>
             <AudioClipFolder>
               <DefaultBundlingType>InGameEXE</DefaultBundlingType>
               <DefaultPriority>Inherit</DefaultPriority>
