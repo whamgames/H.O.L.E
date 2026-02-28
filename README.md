@@ -9,5 +9,23 @@ Developed for the Monthly AGS contest of February 2026
 
 https://www.adventuregamestudio.co.uk/forums/competitions-activities/mags-february-hole-open/  
 
-Credits for 3rd party content: 
-TODO
+Sound Credits: 
+Biting hard on a crunchy carrot by pfranzen -- https://freesound.org/s/381726/ -- License: Attribution 4.0  
+Monster / Alien Eating by EchoCinematics -- https://freesound.org/s/533868/ -- License: Creative Commons 0  
+cave echo.wav by TechRonin -- https://freesound.org/s/554141/ -- License: Creative Commons 0  
+COMTran_Walkie Talkie Beep With Noise.Dispatch Signal.Artificial x3_EM by newlocknew -- https://freesound.org/s/808016/ -- License: Attribution 4.0  
+click clack.wav by thomson93 -- https://freesound.org/s/183595/ -- License: Creative Commons 0  
+tone beep amb verb.wav by Mossy4 -- https://freesound.org/s/263128/ -- License: Attribution 4.0  
+beep4.wav by Freezeman -- https://freesound.org/s/153210/ -- License: Attribution 3.0  
+
+Music Credits: 
+
+"Crypto" Kevin MacLeod (incompetech.com)  
+"Satiate - only strings" Kevin MacLeod (incompetech.com)  
+"Ossuary 5 - Rest" Kevin MacLeod (incompetech.com)  
+"Long Note Two" Kevin MacLeod (incompetech.com)  
+"Shadowlands 6 - The Pit" Kevin MacLeod (incompetech.com)  
+"SCP-x2x (Unseen Presence)" Kevin MacLeod (incompetech.com)  
+"Giant Wyrm" Kevin MacLeod (incompetech.com)  
+Licensed under Creative Commons: By Attribution 4.0 License  
+http://creativecommons.org/licenses/by/4.0/  
