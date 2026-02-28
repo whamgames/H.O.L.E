@@ -1977,6 +1977,16 @@
           <Name>gRopeSpoolMercy</Name>
           <Type>bool</Type>
         </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue />
+          <Name>audioMusic</Name>
+          <Type>AudioChannel*</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue />
+          <Name>audioAmbience</Name>
+          <Type>AudioChannel*</Type>
+        </GlobalVariable>
       </Variables>
     </GlobalVariables>
     <Sprites>
