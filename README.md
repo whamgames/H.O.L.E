@@ -9,3 +9,5 @@ Developed for the Monthly AGS contest of February 2026
 
 https://www.adventuregamestudio.co.uk/forums/competitions-activities/mags-february-hole-open/  
 
+Credits for 3rd party content: 
+TODO
