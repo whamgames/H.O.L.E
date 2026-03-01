@@ -2183,7 +2183,7 @@
             <MovementSpeed>3</MovementSpeed>
             <MovementSpeedX>0</MovementSpeedX>
             <MovementSpeedY>0</MovementSpeedY>
-            <NormalView>1</NormalView>
+            <NormalView>6</NormalView>
             <Properties />
             <RealName xml:space="preserve">New character</RealName>
             <ScriptName>cEyes</ScriptName>
