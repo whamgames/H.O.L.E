@@ -818,6 +818,24 @@
                 <WrapText>False</WrapText>
                 <ZOrder>3</ZOrder>
               </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>11</Height>
+                <ID>4</ID>
+                <Left>171</Left>
+                <Locked>False</Locked>
+                <Name>Label1</Name>
+                <Text xml:space="preserve">Ver. MAGS 1.0</Text>
+                <TextAlignment>TopRight</TextAlignment>
+                <TextColor>59056</TextColor>
+                <Top>308</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>129</Width>
+                <ZOrder>4</ZOrder>
+              </GUILabel>
             </Controls>
           </GUIMain>
           <GUIMain>
@@ -1309,7 +1327,7 @@
                 <Height>25</Height>
                 <ID>0</ID>
                 <Image>103</Image>
-                <Left>5</Left>
+                <Left>7</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>0</MouseoverImage>
                 <Name>Button1</Name>
@@ -1321,7 +1339,7 @@
                 <TextColor>59056</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
                 <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>28</Top>
+                <Top>40</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
                 <Width>100</Width>
@@ -1337,7 +1355,7 @@
                 <Height>25</Height>
                 <ID>1</ID>
                 <Image>103</Image>
-                <Left>109</Left>
+                <Left>63</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>0</MouseoverImage>
                 <Name>Button2</Name>
@@ -1349,31 +1367,41 @@
                 <TextColor>59056</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
                 <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>28</Top>
+                <Top>9</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
                 <Width>100</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>1</ZOrder>
               </GUIButton>
-              <GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
                 <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>14</Height>
+                <Height>25</Height>
                 <ID>2</ID>
-                <Left>5</Left>
+                <Image>103</Image>
+                <Left>113</Left>
                 <Locked>False</Locked>
-                <Name>Label1</Name>
-                <Text xml:space="preserve">Do you want to stop?</Text>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnInGameSettings</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnInGameSettings_OnClick</OnClick>
+                <PushedImage>104</PushedImage>
+                <Text>Settings</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>59056</TextColor>
-                <Top>7</Top>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>40</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
-                <Width>196</Width>
+                <Width>100</Width>
+                <WrapText>False</WrapText>
                 <ZOrder>2</ZOrder>
-              </GUILabel>
+              </GUIButton>
             </Controls>
           </GUIMain>
           <GUIMain>
@@ -1396,14 +1424,187 @@
               <Width>320</Width>
               <ZOrder>0</ZOrder>
             </NormalGUI>
-            <Controls />
+            <Controls>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>0</ID>
+                <Left>0</Left>
+                <Locked>False</Locked>
+                <Name>Label2</Name>
+                <Text xml:space="preserve">YOUR DESCENT HAS ENDED</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>59056</TextColor>
+                <Top>27</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>320</Width>
+                <ZOrder>0</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>1</ID>
+                <Left>0</Left>
+                <Locked>False</Locked>
+                <Name>labScoreCompletionLevel</Name>
+                <Text xml:space="preserve">You reached the bottom of the H.O.L.E</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>59056</TextColor>
+                <Top>48</Top>
+                <Translated>True</Translated>
+                <Visible>False</Visible>
+                <Width>320</Width>
+                <ZOrder>1</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>2</ID>
+                <Left>6</Left>
+                <Locked>False</Locked>
+                <Name>Label4</Name>
+                <Text xml:space="preserve">Final depth reached: </Text>
+                <TextAlignment>MiddleLeft</TextAlignment>
+                <TextColor>59056</TextColor>
+                <Top>87</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>320</Width>
+                <ZOrder>2</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>3</ID>
+                <Left>6</Left>
+                <Locked>False</Locked>
+                <Name>Label5</Name>
+                <Text xml:space="preserve">Time played:</Text>
+                <TextAlignment>MiddleLeft</TextAlignment>
+                <TextColor>59056</TextColor>
+                <Top>124</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>320</Width>
+                <ZOrder>3</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>4</ID>
+                <Left>6</Left>
+                <Locked>False</Locked>
+                <Name>Label6</Name>
+                <Text xml:space="preserve">Final score:</Text>
+                <TextAlignment>MiddleLeft</TextAlignment>
+                <TextColor>59056</TextColor>
+                <Top>169</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>320</Width>
+                <ZOrder>4</ZOrder>
+              </GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>25</Height>
+                <ID>5</ID>
+                <Image>103</Image>
+                <Left>96</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnScoreExit</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnScoreExit_OnClick</OnClick>
+                <PushedImage>104</PushedImage>
+                <Text>Continue</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>59056</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>228</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>100</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>5</ZOrder>
+              </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>6</ID>
+                <Left>96</Left>
+                <Locked>False</Locked>
+                <Name>labFinalDepth</Name>
+                <Text>x</Text>
+                <TextAlignment>MiddleLeft</TextAlignment>
+                <TextColor>59056</TextColor>
+                <Top>100</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>320</Width>
+                <ZOrder>6</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>7</ID>
+                <Left>96</Left>
+                <Locked>False</Locked>
+                <Name>labFinalTime</Name>
+                <Text>y</Text>
+                <TextAlignment>MiddleLeft</TextAlignment>
+                <TextColor>59056</TextColor>
+                <Top>143</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>320</Width>
+                <ZOrder>7</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>8</ID>
+                <Left>96</Left>
+                <Locked>False</Locked>
+                <Name>labFinalScore</Name>
+                <Text>z</Text>
+                <TextAlignment>MiddleLeft</TextAlignment>
+                <TextColor>59056</TextColor>
+                <Top>185</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>320</Width>
+                <ZOrder>8</ZOrder>
+              </GUILabel>
+            </Controls>
           </GUIMain>
           <GUIMain>
             <NormalGUI>
               <BackgroundColor>0</BackgroundColor>
               <BackgroundImage>0</BackgroundImage>
               <BorderColor>0</BorderColor>
-              <Clickable>True</Clickable>
+              <Clickable>False</Clickable>
               <Height>320</Height>
               <ID>7</ID>
               <Left>0</Left>
@@ -1414,11 +1615,205 @@
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Top>0</Top>
               <Transparency>0</Transparency>
-              <Visible>True</Visible>
+              <Visible>False</Visible>
               <Width>320</Width>
               <ZOrder>0</ZOrder>
             </NormalGUI>
-            <Controls />
+            <Controls>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>2</Font>
+                <Height>136</Height>
+                <ID>0</ID>
+                <Left>-2</Left>
+                <Locked>False</Locked>
+                <Name>labEndCredits</Name>
+                <Text xml:space="preserve">H.O.L.E[[by WHAMGAMES (2026)[[Developed for the MAGS February 2026 contest[[See readme file for list of 3rd party content[[[[THANK YOU FOR PLAYING</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>59056</TextColor>
+                <Top>320</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>321</Width>
+                <ZOrder>0</ZOrder>
+              </GUILabel>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>125</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>320</Height>
+              <ID>8</ID>
+              <Left>0</Left>
+              <Name>guiMenuSettings</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Top>0</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>320</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>25</Height>
+                <ID>0</ID>
+                <Image>103</Image>
+                <Left>106</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>Button4</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>Button4_OnClick</OnClick>
+                <PushedImage>104</PushedImage>
+                <Text>Return</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>59056</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>248</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>100</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>0</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>25</Height>
+                <ID>1</ID>
+                <Image>103</Image>
+                <Left>106</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>Button5</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>Button5_OnClick</OnClick>
+                <PushedImage>104</PushedImage>
+                <Text>ON</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>59056</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>71</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>100</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>1</ZOrder>
+              </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>33</Height>
+                <ID>2</ID>
+                <Left>106</Left>
+                <Locked>False</Locked>
+                <Name>Label3</Name>
+                <Text xml:space="preserve">Tutorial Enabled[[(at start of game)</Text>
+                <TextAlignment>TopLeft</TextAlignment>
+                <TextColor>59056</TextColor>
+                <Top>38</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>215</Width>
+                <ZOrder>2</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>17</Height>
+                <ID>3</ID>
+                <Left>106</Left>
+                <Locked>False</Locked>
+                <Name>Label8</Name>
+                <Text xml:space="preserve">Music Volume</Text>
+                <TextAlignment>TopLeft</TextAlignment>
+                <TextColor>59056</TextColor>
+                <Top>128</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>141</Width>
+                <ZOrder>3</ZOrder>
+              </GUILabel>
+              <GUISlider>
+                <BackgroundImage>124</BackgroundImage>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <HandleImage>123</HandleImage>
+                <HandleOffset>-2</HandleOffset>
+                <Height>19</Height>
+                <ID>4</ID>
+                <Left>106</Left>
+                <Locked>False</Locked>
+                <MaxValue>100</MaxValue>
+                <MinValue>0</MinValue>
+                <Name>sldMusicVolume</Name>
+                <OnChange>sldMusicVolume_OnChange</OnChange>
+                <Top>137</Top>
+                <Translated>True</Translated>
+                <Value>100</Value>
+                <Visible>True</Visible>
+                <Width>160</Width>
+                <ZOrder>4</ZOrder>
+              </GUISlider>
+              <GUISlider>
+                <BackgroundImage>124</BackgroundImage>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <HandleImage>123</HandleImage>
+                <HandleOffset>-2</HandleOffset>
+                <Height>19</Height>
+                <ID>5</ID>
+                <Left>106</Left>
+                <Locked>False</Locked>
+                <MaxValue>100</MaxValue>
+                <MinValue>0</MinValue>
+                <Name>sldSFXvolume</Name>
+                <OnChange>sldSFXvolume_OnChange</OnChange>
+                <Top>196</Top>
+                <Translated>True</Translated>
+                <Value>100</Value>
+                <Visible>True</Visible>
+                <Width>160</Width>
+                <ZOrder>5</ZOrder>
+              </GUISlider>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>17</Height>
+                <ID>6</ID>
+                <Left>106</Left>
+                <Locked>False</Locked>
+                <Name>Label10</Name>
+                <Text xml:space="preserve">SFX Volume</Text>
+                <TextAlignment>TopLeft</TextAlignment>
+                <TextColor>59056</TextColor>
+                <Top>189</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>141</Width>
+                <ZOrder>6</ZOrder>
+              </GUILabel>
+            </Controls>
           </GUIMain>
         </GUIs>
       </GUIFolder>
@@ -1751,6 +2146,50 @@
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>12</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <StartingRoom>-1</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <TurnWhenFacing>True</TurnWhenFacing>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>4</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>1</NormalView>
+            <Properties />
+            <RealName xml:space="preserve">New character</RealName>
+            <ScriptName>cEyes</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>0</SpeechColor>
             <SpeechView>0</SpeechView>
             <StartX>160</StartX>
             <StartY>120</StartY>
@@ -2400,6 +2839,90 @@
           <DefaultValue>false</DefaultValue>
           <Name>gSavedGameNow</Name>
           <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>0</DefaultValue>
+          <Name>gTimerFrames</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>0</DefaultValue>
+          <Name>gTimerSeconds</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>0</DefaultValue>
+          <Name>gTimerMinutes</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>0</DefaultValue>
+          <Name>gTimerHours</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>0</DefaultValue>
+          <Name>gFinalDepth</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>true</DefaultValue>
+          <Name>gSettingMusicEnabled</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>true</DefaultValue>
+          <Name>gSettingSFXEnabled</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>100</DefaultValue>
+          <Name>gSettingMusicMaxVolume</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>100</DefaultValue>
+          <Name>gSettingSFXMaxVolume</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>true</DefaultValue>
+          <Name>gSettingsTutorialEnabled</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>0</DefaultValue>
+          <Name>gAmbientTargetVolume</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>0</DefaultValue>
+          <Name>gEyeEncounter</Name>
+          <Type>int</Type>
         </GlobalVariable>
       </Variables>
     </GlobalVariables>
@@ -3415,6 +3938,91 @@
                   </Sprite>
                 </Sprites>
               </SpriteFolder>
+              <SpriteFolder Name="POI specials">
+                <SubFolders />
+                <Sprites>
+                  <Sprite Slot="118" Width="19" Height="19" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\Projects\H.O.L.E\GFX\POI\Specials\POI_special_1.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>19</ImportHeight>
+                      <ImportWidth>19</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <TransparentColorIndex>0</TransparentColorIndex>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="119" Width="19" Height="19" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\Projects\H.O.L.E\GFX\POI\Specials\POI_special_2.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>19</ImportHeight>
+                      <ImportWidth>19</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <TransparentColorIndex>0</TransparentColorIndex>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="120" Width="19" Height="19" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\Projects\H.O.L.E\GFX\POI\Specials\POI_special_3.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>19</ImportHeight>
+                      <ImportWidth>19</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <TransparentColorIndex>0</TransparentColorIndex>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="121" Width="19" Height="19" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\Projects\H.O.L.E\GFX\POI\Specials\POI_special_4.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>19</ImportHeight>
+                      <ImportWidth>19</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <TransparentColorIndex>0</TransparentColorIndex>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="122" Width="19" Height="19" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\Projects\H.O.L.E\GFX\POI\Specials\POI_special_5.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>19</ImportHeight>
+                      <ImportWidth>19</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <TransparentColorIndex>0</TransparentColorIndex>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                </Sprites>
+              </SpriteFolder>
             </SubFolders>
             <Sprites>
               <Sprite Slot="5" Width="320" Height="1280" ColorDepth="32" Resolution="Real" AlphaChannel="True">
@@ -3929,6 +4537,54 @@
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
+              <Sprite Slot="123" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>D:\Projects\H.O.L.E\GFX\GUI\slider_grabber.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>16</ImportHeight>
+                  <ImportWidth>16</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="124" Width="160" Height="8" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>D:\Projects\H.O.L.E\GFX\GUI\slider_base_160px.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>8</ImportHeight>
+                  <ImportWidth>160</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="125" Width="320" Height="320" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                <Source>
+                  <FileName>D:\Projects\H.O.L.E\GFX\finale_BG.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>320</ImportHeight>
+                  <ImportWidth>320</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Monstro">
@@ -4287,6 +4943,171 @@
                   <OffsetY>0</OffsetY>
                   <ImportHeight>5</ImportHeight>
                   <ImportWidth>5</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+            </Sprites>
+          </SpriteFolder>
+          <SpriteFolder Name="Eyes">
+            <SubFolders />
+            <Sprites>
+              <Sprite Slot="126" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>D:\Projects\H.O.L.E\GFX\Eyes\eyes_bigger_1.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>16</ImportHeight>
+                  <ImportWidth>16</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="127" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>D:\Projects\H.O.L.E\GFX\Eyes\eyes_bigger_2.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>16</ImportHeight>
+                  <ImportWidth>16</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="128" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>D:\Projects\H.O.L.E\GFX\Eyes\eyes_bigger_3.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>16</ImportHeight>
+                  <ImportWidth>16</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="129" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>D:\Projects\H.O.L.E\GFX\Eyes\eyes_bigger_4.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>16</ImportHeight>
+                  <ImportWidth>16</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="130" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>D:\Projects\H.O.L.E\GFX\Eyes\eyes_bigger_5.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>16</ImportHeight>
+                  <ImportWidth>16</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="131" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>D:\Projects\H.O.L.E\GFX\Eyes\eyes_smol_1.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>16</ImportHeight>
+                  <ImportWidth>16</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="132" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>D:\Projects\H.O.L.E\GFX\Eyes\eyes_smol_2.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>16</ImportHeight>
+                  <ImportWidth>16</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="133" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>D:\Projects\H.O.L.E\GFX\Eyes\eyes_smol_3.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>16</ImportHeight>
+                  <ImportWidth>16</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="134" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>D:\Projects\H.O.L.E\GFX\Eyes\eyes_smol_4.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>16</ImportHeight>
+                  <ImportWidth>16</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="135" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>D:\Projects\H.O.L.E\GFX\Eyes\eyes_smol_5.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>16</ImportHeight>
+                  <ImportWidth>16</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>True</RemapToGamePalette>
@@ -5239,6 +6060,180 @@
                     <Flipped>False</Flipped>
                     <ID>1</ID>
                     <Image>93</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>6</ID>
+            <Name>vEyes</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>131</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>132</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>133</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>133</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>134</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>135</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>133</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>132</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>131</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>4</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>126</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>127</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>128</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>5</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>128</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>129</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>6</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>129</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>130</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>131</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
